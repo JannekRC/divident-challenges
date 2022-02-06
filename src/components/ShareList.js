@@ -15,6 +15,11 @@ function ShareList() {
       console.log(shares);
   };
 
+
+ // HEKLLO ASKDKJSDJK
+ /* ITS ME PLEASE WORK */
+
+ 
   let calculateShares = () => {
       for(let i = 0; i<shares.length; i++){
       console.log(`Share: ${shares[i].share}`)
