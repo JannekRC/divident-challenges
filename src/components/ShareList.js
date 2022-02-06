@@ -20,6 +20,8 @@ function ShareList() {
 
  // HEKLLO ASKDKJSDJK
  /* ITS ME PLEASE WORK */
+ 
+ // HELÆLO FROM JANNEK
 
  
   let calculateShares = () => {
