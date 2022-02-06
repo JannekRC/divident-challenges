@@ -3,9 +3,13 @@ import React, { useState, useEffect } from "react";
 function ShareList() {
   const [shares, setShares] = useState([]);
 
+  // useEffect for the first fetch before loading the page
+
   useEffect(() => {
     fetchShares();
   }, []);
+
+  // Fetching const from the JSON file
 
   const fetchShares = () => {
     fetch(
@@ -16,15 +20,27 @@ function ShareList() {
       .catch((err) => console.error(err));
     console.log(shares);
   };
-
-
- // HEKLLO ASKDKJSDJK
- /* ITS ME PLEASE WORK */
  
- // HELÆLO FROM JANNEK
+  // New ES6 calculations working on !!
 
- 
-  let calculateShares = () => {
+  /* Need to figure out the last year dividend, the 5-year average and the weightened
+  with the new proper way!! */
+  
+  let share = shares.map(x => 
+    console.log(
+      `Share: ${x.share} 
+      Company: ${x.company} 
+      Price ${x.price}
+      Last year dividend: ${x.dividendHistory.map(x => x.dividend)}
+      `
+      )
+    );
+
+    /* Old calculation commented out but doesnt deleted for help!! */
+
+    // DO NOT DELETE
+
+  /*let calculateShares = () => {
     for (let i = 0; i < shares.length; i++) {
       console.log(`Share: ${shares[i].share}`);
       console.log(`Company: ${shares[i].company}`);
@@ -57,13 +73,13 @@ function ShareList() {
         }`
       );
     }
-  };
+  };*/
 
   return (
     <div>
       <h1>Share List</h1>
       <h3>Jannek Christensen & Zoltán Szikszó</h3>
-      <p>{calculateShares()}</p>
+      <p></p>
     </div>
   );
 }
