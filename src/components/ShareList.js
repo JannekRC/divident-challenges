@@ -31,10 +31,14 @@ function ShareList() {
       `Share: ${x.share} 
       Company: ${x.company} 
       Price ${x.price}
-      Last year dividend: ${x.dividendHistory.map(x => x.dividend)}
+      Last year dividend: ${x.dividendHistory[0].dividend}
+      Dividend yield-%: ${((x.dividendHistory[0].dividend / x.price) * 100).toFixed(1)}
+      5-year average dividend yield-%: ${x.dividendHistory.map(y => y.dividend)}
       `
       )
     );
+
+//) / 5 / x.price) * 100).toFixed(1)
 
     /* Old calculation commented out but doesnt deleted for help!! */
 
